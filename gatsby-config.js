@@ -6,11 +6,19 @@
 
 module.exports = {
   /* Your site config here */
-  siteMetaData:{
+  siteMetadata:{
     title:"Gatsby Blog!",
     author:"Ndirangu Joe"
   },
   plugins: [
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    {
+      resolve:'gatsby-source-filesystem',
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      }
+    },
+    'gatsby-transformer-remark'
   ],
 }

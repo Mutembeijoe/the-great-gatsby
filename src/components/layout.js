@@ -6,10 +6,10 @@ import layoutStyles from "./layout.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Layout = props => {
-    const {site:{siteMetaData:{title,author}}} = useStaticQuery(graphql`
+    const {site:{siteMetadata:{title,author}}} = useStaticQuery(graphql`
     query{
       site {
-        siteMetaData {
+        siteMetadata {
           author
           title
         }
