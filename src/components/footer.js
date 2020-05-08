@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Footer = ()=>(
+const Footer = (props)=>(
 
     <div>
-        <span>Joe Mutembei &copy;{new Date().getFullYear()}</span>
+        <span>{props.author} &copy;{new Date().getFullYear()}</span>
     </div>
 )
 
