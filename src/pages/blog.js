@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Blog = () => {
   const {
@@ -16,6 +16,9 @@ const Blog = () => {
               date
             }
             html
+            fields{
+              slug
+            }
           }
         }
       }
@@ -28,9 +31,9 @@ const Blog = () => {
       <h1>Blog Posts</h1>
 
       <ol>
-        {edges.map(({ node: { frontmatter: { title, date } } }) => (
+        {edges.map(({ node: { frontmatter: { title, date }, fields:{slug} } }) => (
           <li>
-            <span style={{ fontSize: "1.5rem" }}>{title} </span>
+            <span style={{ fontSize: "1.5rem" }}><Link to={`/blog/${slug}`}>{title}</Link> </span>
             <span>{date}</span>
           </li>
         ))}
