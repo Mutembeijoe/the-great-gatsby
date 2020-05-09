@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import Head from "../components/head"
 
 const About = () => (
   <Layout>
+  <Head title='About Me'/>
     <h1>About Me</h1>
     <div>
       Hi there my name is Joe

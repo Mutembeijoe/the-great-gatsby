@@ -7,10 +7,11 @@
 module.exports = {
   /* Your site config here */
   siteMetadata:{
-    title:"Gatsby Blog!",
+    title:"Gatsby Blog",
     author:"Ndirangu Joe"
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
       resolve:'gatsby-source-filesystem',
